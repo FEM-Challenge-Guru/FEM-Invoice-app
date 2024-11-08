@@ -9,12 +9,12 @@ This is a solution to the [Invoice app challenge on Frontend Mentor](https://www
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
+- [Our process](#our-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
+  - [What we learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
+- [Authors](#authors)
 - [Acknowledgments](#acknowledgments)
 
 
