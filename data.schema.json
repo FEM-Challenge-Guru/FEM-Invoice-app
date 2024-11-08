@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Invoice",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the invoice"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the invoice was created"
+    },
+    "paymentDue": {
+      "type": "string",
+      "format": "date",
+      "description": "Date by which the payment is due"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the invoice"
+    },
+    "paymentTerms": {
+      "type": "integer",
+      "description": "Number of days until payment is due"
+    },
+    "clientName": {
+      "type": "string",
+      "description": "Name of the client"
+    },
+    "clientEmail": {
+      "type": "string",
+      "format": "email",
+      "description": "Email address of the client"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["paid", "pending", "draft"],
+      "description": "Status of the invoice"
+    },
+    "senderAddress": {
+      "type": "object",
+      "description": "Address of the sender",
+      "properties": {
+        "street": { "type": "string" },
+        "city": { "type": "string" },
+        "postCode": { "type": "string" },
+        "country": { "type": "string" }
+      },
+      "required": ["street", "city", "postCode", "country"]
+    },
+    "clientAddress": {
+      "type": "object",
+      "description": "Address of the client",
+      "properties": {
+        "street": { "type": "string" },
+        "city": { "type": "string" },
+        "postCode": { "type": "string" },
+        "country": { "type": "string" }
+      },
+      "required": ["street", "city", "postCode", "country"]
+    },
+    "items": {
+      "type": "array",
+      "description": "List of items included in the invoice",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "quantity": { "type": "integer", "minimum": 1 },
+          "price": { "type": "number", "minimum": 0 },
+          "total": { "type": "number", "minimum": 0 }
+        },
+        "required": ["name", "quantity", "price", "total"]
+      },
+      "minItems": 1
+    },
+    "total": {
+      "type": "number",
+      "description": "Total amount for the invoice",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "id",
+    "createdAt",
+    "paymentDue",
+    "description",
+    "paymentTerms",
+    "clientName",
+    "clientEmail",
+    "status",
+    "senderAddress",
+    "clientAddress",
+    "items",
+    "total"
+  ]
+}
