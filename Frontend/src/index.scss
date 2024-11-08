@@ -1,7 +1,7 @@
-@import 'variables';
+@use 'variables' as *; // Import all variables & styles from _variables.scss
 
 :root {
-  color-scheme: light dark;
+  // color-scheme: light dark;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
