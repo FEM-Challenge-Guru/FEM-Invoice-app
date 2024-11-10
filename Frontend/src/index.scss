@@ -1,12 +1,22 @@
 @use 'variables' as *; // Import all variables & styles from _variables.scss
 
 :root {
-  // color-scheme: light dark;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  // color-scheme: light dark;
+
+  // Light theme
+  // Interpolating Sass variables in CSS variables to enable value switch
+  --Page-bg: #{$Bluish-white-11};
+  --Text-color: #{$Bluish-black-8};
+}
+
+// Dark theme
+.dark-theme {
+  --Page-bg: #{$Very-dark-blue-12};
+  --Text-color: #{$Bluish-white-11};
 }
 
 *, *::before, *::after {
@@ -15,26 +25,43 @@
   padding: 0;
 }
 
-input {
-  padding: 10px;
+body {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-body;
+  line-height: $line-height-body;
+  letter-spacing: $letter-spacing-body;
+
+  background-color: var(--Page-bg);
+  color: var(--Text-color);
 }
 
+// Headings
 h1 {
-  font-size: 2.5rem;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-heading-l;
+  line-height: $line-height-heading-l;
+  letter-spacing: $letter-spacing-heading-l;
 }
 
 h2 {
-  font-size: 2rem;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-heading-m;
+  line-height: $line-height-heading-m;
+  letter-spacing: $letter-spacing-heading-m;
 }
 
 h3 {
-  font-size: 1.5rem;
-}
-
-h4 {
-  font-size: 1.25rem;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-heading-s;
+  line-height: $line-height-heading-s;
+  letter-spacing: $letter-spacing-heading-s;
 }
 
 .faint-text {
   opacity: 0.65;
+}
+
+input {
+  padding: 10px;
 }
