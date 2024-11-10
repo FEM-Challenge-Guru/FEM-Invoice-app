@@ -1,0 +1,43 @@
+@use '../../variables' as *;
+
+.pageNotFound {
+  display: grid;
+  justify-items: center;
+  height: 100vh;
+  text-align: center;
+  color: var(--Text-color);
+  background-color: var(--Page-bg);
+  padding: 30px;
+  gap: 50px;
+
+  img {
+    width: 100%;
+    max-width: 500px;
+    object-fit: contain;
+  }
+
+  .infoWrapper {
+    margin-bottom: 80px;
+
+    p {
+      margin: 30px 0 50px 0;
+    }
+
+    a {
+      width: 70%;
+      padding: 15px 45px;
+      background-color: hsl(233, 26%, 27%);
+      border: none;
+      font-size: 1rem;
+      border-radius: 20px;
+      transition: .2s;
+      margin-top: 10px;
+      text-decoration: none;
+      color: $Bluish-white-11;
+  
+      &:hover {
+        background-color: hsl(234, 20%, 41%);
+      }
+    }
+  }
+}

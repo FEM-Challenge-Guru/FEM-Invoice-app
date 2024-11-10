@@ -38,11 +38,12 @@
   justify-content: space-between;
   align-items: center;
   gap: 15px;
+  margin: 10px 25px 15px 0;
 
   img {
     width: 60px;
     height: 60px;
-    background-color: rgb(188, 140, 250);
+    background-image: linear-gradient(to bottom, $Dark-purple-1 50%, $Light-purple-2 50%);
     padding: 10px;
     border-radius: 30%;
   }
@@ -66,7 +67,7 @@ form {
       top: 30%;
       left: 15px;
       cursor: text;
-      background-color: white;
+      background-color: var(--Page-bg);
       font-size: 1rem;
       transition: 0.2s ease-in-out;
       opacity: 0.7;
@@ -76,14 +77,16 @@ form {
       width: 100%;
       height: 100%;
       outline: none;
-      border: 1px solid;
+      border: 1px solid $Very-light-blue-5;
       border-radius: 6px;
       font-size: 0.9rem;
       background-color: transparent;
-      transition: 0.2s ease-in-out;
   
-      &:focus, &:valid, &:hover {
-        border: 2px solid purple;
+      &:hover {
+        border: 1.2px solid $Dark-purple-1;
+      }
+      &:focus, &:valid {
+        border: 1.5px solid $Dark-purple-1;
       }
   
       // When the input is focused or has some value, the label will move up
@@ -91,6 +94,7 @@ form {
         transform: translate(-10px, -100%) scale(0.9);
         padding: 5px;
         opacity: 1;
+        color: $Dark-purple-1;
       }
     }
 
@@ -106,15 +110,17 @@ form {
 
   button {
     width: 70%;
-    padding: 10px;
-    background-color: rgb(135, 170, 245);
+    padding: 12px 5px;
+    background-color: hsl(233, 26%, 27%);
     border: none;
-    border-radius: 7px;
+    font-size: 1rem;
+    border-radius: 20px;
     transition: .2s;
     margin-top: 10px;
+    color: $Bluish-white-11;
 
     &:hover {
-      opacity: 0.7;
+      background-color: hsl(234, 20%, 41%);
     }
   }
 }  
@@ -124,7 +130,7 @@ form {
   height: 100%;
   object-fit: cover;
   aspect-ratio: 1/1;
-  border-radius: 50px 0 0 50px;
+  border-radius: 100px 0 0 100px;
 }
 
 .title {
