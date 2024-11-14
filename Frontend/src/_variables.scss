@@ -19,6 +19,12 @@ $Very-light-red-10: hsl(0, 100%, 80%);
 $Bluish-white-11: hsl(240, 27%, 98%);
 $Very-dark-blue-12: hsl(233, 30%, 11%);
 
+// Extra colors
+$Red: rgb(245, 41, 41);
+$Bright-green: hsl(124, 75%, 78%);
+$Bright-orange: hsl(39, 94%, 50%);
+$Green: rgb(26, 215, 39);
+
 
 // Font weights
 $font-weight-regular: 400;
@@ -47,3 +53,12 @@ $letter-spacing-heading-s: -0.25px;
 $letter-spacing-heading-s-variant: -0.25px;
 $letter-spacing-body: -0.1px;
 $letter-spacing-body-variant: -0.25px;
+
+
+@mixin alert($color, $bg-color) {
+  padding: 6px 15px;
+  background-color: $bg-color;
+  color: $color;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
