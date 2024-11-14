@@ -1,0 +1,8 @@
+@use '../../variables' as *;
+
+.sideBar {
+  height: 100%;
+  position: fixed;
+  left: 0;
+  background-color: black;
+}

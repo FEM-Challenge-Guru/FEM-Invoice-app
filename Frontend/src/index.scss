@@ -11,6 +11,9 @@
   // Interpolating Sass variables in CSS variables to enable value switch
   --Page-bg: #{$Bluish-white-11};
   --Text-color: #{$Bluish-black-8};
+
+  // --Page-bg: #{$Very-dark-blue-12};
+  // --Text-color: #{$Bluish-white-11};
 }
 
 // Dark theme
@@ -58,10 +61,44 @@ h3 {
   letter-spacing: $letter-spacing-heading-s;
 }
 
+a {
+  text-decoration: none;
+  color: $Light-purple-2;
+}
+
 .faint-text {
   opacity: 0.65;
 }
 
+.reveal {
+  display: block;
+}
+
 input {
   padding: 10px;
+  color: var(--Text-color);
+}
+
+.success {
+ @include alert($Very-dark-blue-12, $Bright-green);
+}
+
+.warning {
+  @include alert($Bluish-white-11, $Pale-red-9);
+}
+
+.red {
+  color: $Red;
+}
+.pale-red {
+  color: $Pale-red-9;
+}
+.orange {
+  color: $Bright-orange
+}
+.lemon {
+  color: $Bright-green;
+}
+.green {
+  color: $Green;
 }
