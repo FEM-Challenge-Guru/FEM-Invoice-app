@@ -5,16 +5,16 @@ import { useLoginStore } from '../../stores';
 
 
 function Login() {
+  const {loginForm, loginPage, title, rememberMe, googleLoginBtn, hrOr } = styles;
   const [lgPwVisible, setLgPwVisible] = useState(false);
   const { passwordInCorrect, rememberLogin, setRememberLogin } = useLoginStore();
-  const {loginForm, loginPage, title, rememberMe } = styles;
 
   // password visibility for login page
   const changeLgPwVisibility = () => {
     setLgPwVisible(!lgPwVisible);
   }
 
-  const handleLoginAuth = () => {
+  const handleLoginAuth = (e) => {
     // login auth logic goes here
   }
 
@@ -26,9 +26,18 @@ function Login() {
        { passwordInCorrect && <p className="warning">Password is incorrect. Try again</p> }
 
         <h2 className={title}>Login to you account</h2>
-        <p className='faint-text'>Welcome back! Please enter your details...</p>
 
-        <form action='#' className={loginForm}>
+        <button className={googleLoginBtn}> <img src="/assets/google.png" alt="Google logo" /> Continue with Google</button>
+
+        <div className={`${hrOr} faint-text`}>
+          <hr />
+          <p className=''>or</p>
+          <hr />
+        </div>
+
+        <p className='faint-text'>Enter your details to login...</p>
+
+        <form action='#' className={loginForm} onSubmit={(e) => handleLoginAuth(e)}>
           <label>
             <input type="email" name='email' placeholder=' ' aria-label="Email" required />
             <span>Email</span>

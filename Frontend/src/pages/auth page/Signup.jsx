@@ -5,11 +5,11 @@ import { handlePasswordStrength } from '../../utils/passwordStrengthValidator'
 
 
 function Signup() {
+  const {signUpForm, signUpPage, title, alertInfo, pwStrength, googleSignInBtn, hrOr } = styles;
   const [suPwVisible, setSuPwVisible] = useState(false);
   const [displayPwStrength, setDisplayPwStrength] = useState(false);
   const [strengthInfo, setStrengthInfo] = useState('');
   const [pwStrengthColor, setPwStrengthColor] = useState('');
-  const {signUpForm, signUpPage, title, alertInfo, pwStrength } = styles;
   const [passwordsDontMatch, setPasswordsDontMatch] = useState(false);
   const userPassword = useRef(null);
   const confirmPassword = useRef(null);
@@ -18,7 +18,7 @@ function Signup() {
   const changeSuPwVisibility = () => {
     setSuPwVisible(!suPwVisible);
   }
-
+ 
   // signup auth logic
   const handleSignupAuth = (e) => {
     // check if passwords match and password strength is strong or very strong
@@ -75,7 +75,16 @@ function Signup() {
     <>
       <div className={signUpPage}>
         <h2 className={title}>Create an account</h2>
-        <p className='faint-text'>Welcome! Please enter your details to sign up...</p>
+
+        <button className={googleSignInBtn}> <img src="/assets/google.png" alt="Google logo" /> Sign up with Google</button>
+
+        <div className={`${hrOr} faint-text`}>
+          <hr />
+          <p className=''>or</p>
+          <hr />
+        </div>
+
+        <p className='faint-text'>Fill in your details to sign up...</p>
 
         <form action='#' className={signUpForm} onSubmit={(e) => handleSignupAuth(e)}>
           <label>
