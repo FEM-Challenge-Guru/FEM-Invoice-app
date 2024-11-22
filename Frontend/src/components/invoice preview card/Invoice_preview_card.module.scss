@@ -1,0 +1,45 @@
+@use '../../variables' as *;
+
+.invoicePreviewCard {
+  background-color: var(--Card-bg);
+  box-shadow: var(--Card-shadow);
+  border-radius: $Card-bdr-rad;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid $Dark-purple-1;
+  }
+
+  p {
+    flex: 1;
+    padding-right: 10px;
+  }
+
+  div {
+    display: flex;
+
+    img {
+      object-fit: contain;
+      aspect-ratio: 1/1;
+      margin-left: 15px;
+    }
+  }
+}
+
+.invoiceID > span, .invoicedAmt, .invStatus {
+  font-size: $font-size-heading-s;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading-s;
+  letter-spacing: $letter-spacing-heading-s;
+  color: var(--Text-color);
+}
+
+.invoicedAmt {
+  text-align: right;
+  padding-right: 60px !important;
+}

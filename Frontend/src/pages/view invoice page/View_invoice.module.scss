@@ -1,0 +1,161 @@
+@use '../../variables' as *;
+
+.viewInvoicePage {
+  padding: 1px;
+}
+
+.goBackBtn {
+  font-weight: $font-weight-bold;
+  cursor: pointer;
+
+  &:hover {
+    color: $Pale-lavender-7;
+  }
+
+  img {
+    margin-right: 20px;
+  }
+}
+
+.invoiceSettings {
+  background-color: var(--Card-bg);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin: 30px 0 20px;
+  box-shadow: var(--Card-shadow);
+}
+
+.invStatus {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.settingsBtns {
+  display: flex;
+  gap: 20px;
+}
+
+.editBtn {
+  background-color: var(--edit-btn-bg);
+  color: var(--edit-btn-color);
+
+  &:hover {
+    background-color: var(--edit-btn-hover-bg);
+    color: var(--edit-btn-hover-color);
+  }
+}
+
+.deleteBtn {
+  background-color: $Pale-red-9;
+  color: $White;
+
+  &:hover {
+    background-color: $Very-light-red-10;
+  }
+}
+
+.markPaidBtn {
+  background-color: $Dark-purple-1;
+  color: $White;
+
+  &:hover {
+    background-color: $Light-purple-2;
+  }
+}
+
+.invoiceDetails {
+  background-color: var(--Card-bg);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: var(--Card-shadow);
+}
+
+.idSenderAddrWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.invNameAndDescrp {
+  h3 {
+    margin-bottom: 5px;
+  }
+}
+
+.senderAddress {
+  text-align: right;
+}
+
+.dateBilltoSendtoWrapper {
+  display: grid;
+  grid-template-areas: 
+    "dates billTo sendTo";
+}
+
+.createdDueWrapper {
+  display: grid;
+  grid-area: dates;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.billtoWrapper {
+  grid-area: billTo;
+  margin-top: 18px;
+}
+
+.sendtoWrapper {
+  grid-area: sendTo;
+  margin-top: 18px;
+}
+
+.itemsWrapper {
+  margin-top: 30px;
+  background-color: var(--items-bg);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.allItems {
+  padding: 30px;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+
+    p {
+      // background-color: red;
+      flex: 1;
+    }
+    p:nth-child(1) {
+      width: 90%;
+    }
+    p:nth-child(2) {
+      text-align: center;
+      flex-grow: 1;
+    }
+    p:nth-child(3) {
+      text-align: right;
+      flex-grow: 1;
+    }
+    p:nth-child(4) {
+      text-align: right;
+      flex-grow: 1;
+    }
+  }
+}
+
+.amountDueWrapper {
+  color: $White;
+  background-color: var(--total-amount-bg);
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
