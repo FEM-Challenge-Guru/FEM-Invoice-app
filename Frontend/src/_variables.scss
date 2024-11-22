@@ -20,10 +20,14 @@ $Bluish-white-11: hsl(240, 27%, 98%);
 $Very-dark-blue-12: hsl(233, 30%, 11%);
 
 // Extra colors
+$White: hsl(0, 0%, 100%);
 $Red: rgb(245, 41, 41);
-$Bright-green: hsl(124, 75%, 78%);
-$Bright-orange: hsl(39, 94%, 50%);
+$Bright-green: hsl(160, 67%, 52%);
+$Bright-orange: hsl(34, 100%, 50%);
 $Green: rgb(26, 215, 39);
+
+$Card-bdr-rad: 8px;
+$Fields-bdr-rad: 4px;
 
 
 // Font weights
@@ -36,7 +40,7 @@ $font-size-heading-l: 36px;
 $font-size-heading-m: 24px;
 $font-size-heading-s: 15px;
 $font-size-heading-s-variant: 15px;
-$font-size-body: 16px;
+$font-size-body: 15px;
 
 // Line heights
 $line-height-heading-l: 33px;

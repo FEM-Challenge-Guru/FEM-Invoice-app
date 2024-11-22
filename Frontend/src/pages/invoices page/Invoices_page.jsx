@@ -1,5 +1,6 @@
-import React from 'react'
 import styles from './Invoices_page.module.scss'
+import { Outlet } from 'react-router-dom'
+import SideBar from '../../components/side bar/SideBar'
 
 function Invoices_page() {
   const {invoicesPage} = styles;
@@ -7,7 +8,14 @@ function Invoices_page() {
   
   return (
     <>
-      <div className={invoicesPage}>This is the invoices page</div>
+      <div className={invoicesPage}>
+        <aside>
+          <SideBar />
+        </aside>
+        <main>
+          <Outlet />
+        </main>
+      </div>
     </>
   )
 }

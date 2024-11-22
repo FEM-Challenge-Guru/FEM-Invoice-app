@@ -1,5 +1,19 @@
 @use '../../variables';
 
 .invoicesPage {
-  background-color: greenyellow;
+  display: flex;
+  width: 100vw;
+  overflow-x: hidden;
+
+  aside {
+    width: 103px;
+    height: 100vh;
+  }
+
+  main {
+    flex-grow: 1;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 70px;
+  }
 }
